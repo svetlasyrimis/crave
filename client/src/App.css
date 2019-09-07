@@ -1,0 +1,410 @@
+
+.header header h1{
+  width: 100%;
+  display: flex; 
+  color: rgb(194, 25, 25);
+  font-size: 180px;
+  text-align: center;
+  justify-content: space-around; 
+  font-family: 'Lobster', cursive;
+  margin-right: 180px;
+  margin-top: 15px;
+  padding-top: 50px; 
+}
+
+.header header img {
+  margin-top: 40px;
+  margin-left: 50px;
+  height: 250px; 
+  margin-bottom: 50px;
+  padding-top: 55px; 
+}
+
+header {
+  margin-top: 0px;
+  display: flex; 
+  align-content: center;
+  text-align: center;
+  border-bottom: 5px solid black; 
+  background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
+}
+
+div p{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+
+}
+
+#nav-bar {
+  width: 100%;
+  position: fixed; 
+  height: 100px; 
+  justify-content: space-around;
+  background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
+  display: flex;
+  align-items: center;
+  top: 0;
+  z-index: 10;
+}
+
+.heart {
+  color: red;
+}
+
+#nav-bar a{
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 30px;
+  
+}
+
+#nav-bar a:hover{
+  color: rgb(194, 25, 25);
+}
+
+.shuffler div{
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+}
+
+.shuffler h1{
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+
+.shuffler{
+  align-content: center;
+  text-align: center;
+}
+
+.log{
+  display: flex; 
+  flex-direction: column;
+  width: 150px; 
+  margin: 0 auto;
+
+}
+
+
+.Loginform {
+  
+  align-content: center;
+  text-align: center;
+  
+}
+
+.reg{
+  display: flex; 
+  width: 200px; 
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.Registerform{
+  align-content: center;
+  text-align: center;
+  display: block; 
+}
+
+.button{
+  align-content: center;
+  text-align: center;
+}
+
+/* Combo Board */
+.heart {
+  font-size:1.5em;
+  color:red;
+}
+.comboCard {
+  background-color: lightblue; 
+}
+
+.row {
+  background-color: white; 
+  border-radius: 50px 50px 50px 50px; 
+  padding-top: 45px; 
+  padding-bottom: 10px; 
+  box-shadow: 10px 10px 5px grey;
+
+}
+
+.container{
+  margin-top: 15px; 
+  margin-bottom: 40px; 
+  
+}
+
+.shuffler {
+  background-color: lightblue;
+
+}
+
+.shuffler h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+.shuffler h2 {
+  font-family: 'Lobster', cursive;
+}
+
+.boardCard {
+  text-align: center;
+}
+
+
+.boardCard button {
+  align-content: center;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 20px; 
+  width: 10%;  
+  justify-content: space-around;
+  margin-bottom: 45px; 
+  background-color: white;
+}
+
+.allCombos {
+  background-color: lightblue; 
+  
+}
+
+
+.comboCard {
+  text-align: center;
+}
+
+
+.comboCard button{
+  font-family: 'Lobster', cursive;
+  font-size: 20px; 
+}
+
+
+.comboHeaders h4{
+  text-align: center;
+  font-size: 55px; 
+  font-family: 'Lobster', cursive;
+}
+
+/* Log In Form */
+.loginpage{
+  background-image: linear-gradient(to right, white, hsla(190, 48%, 80%, 0.687), white);
+  box-shadow: 34px 13px 36px 5px rgba(55,56,56,1);
+  margin-left: 250px; 
+  margin-top: 30px;
+  margin-right: 250px;
+  padding-top: 25px;
+  padding-bottom: 15px; 
+  border-radius: 50px 50px 50px 50px;
+}
+
+.Loginform h3, label {
+  font-family: 'Lobster', cursive;
+}
+
+.Loginform {
+  margin-top: 25px;
+}
+
+.button {
+  padding-bottom: 35px;
+  
+}
+
+.Loginform label {
+  font-size: 25px;
+}
+
+.Loginform h3{
+  font-size: 35px;
+}
+
+.Loginform input {
+  margin-bottom: 15px;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+.loginpage .button {
+  font-family: 'Lobster', cursive;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* Register Form */
+.registerpage {
+  background-image: linear-gradient(to right, white, hsla(190, 48%, 80%, 0.687), white);
+  box-shadow: 34px 13px 36px 5px rgba(55,56,56,1);
+  margin-left: 250px; 
+  margin-top: 30px;
+  margin-right: 250px;
+  padding-top: 25px;
+  padding-bottom: 15px; 
+  border-radius: 50px 50px 50px 50px;
+}
+
+.Registerform h3{
+  font-size: 35px;
+}
+
+.Registerform h3, label {
+  font-family: 'Lobster', cursive;
+}
+
+.Registerform {
+  margin-top: 25px;
+}
+
+.Registerform label {
+  font-size: 25px;
+}
+
+.Registerform h3{
+  font-size: 35px;
+}
+
+.Registerform input {
+  margin-bottom: 15px;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+.registerpage .button {
+  font-family: 'Lobster', cursive;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.shuffler button {
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  background-color: rgb(194, 25, 25);
+  color: white;
+  padding: 15px;
+  margin-bottom: 25px; 
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.btn-primary {
+  color: black;
+  border:none;
+  font-family: 'Lobster', cursive;
+  font-size: 25px; 
+  background-color: white;
+  border-radius: 10%;
+
+}
+.btn-primary:hover {
+  background-color: rgb(96, 189, 223);
+  border:none;
+  transition: .3s all ease-in-out;
+}
+
+
+
+#container > div
+{
+    display: inline-block;
+    border: solid 1px #000;
+     overflow: scroll;
+    height: 500px; 
+}
+
+#container
+{
+    border: solid 1px #ff0000;
+    text-align: center;
+    margin: 0px auto;
+    width: 60%;
+    display: flex;
+
+   
+}
+
+.comboCard button[name=all]{
+  margin-top: 20px;
+  font-size: 35px;
+}
+
+
+.card-text {
+  font-family: 'Yanon-e Kaffeesatz', sans-serif;
+}
+
+.footer-section{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 26px;
+  
+}
+.bold {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+@media only screen 
+  and (max-width: 480px) {
+    .header header h1{
+      font-size: 75px;
+      text-align: left;
+      margin: 0;
+      padding: 0 0 20px 0;
+  }
+  .header header img{
+    margin: 0;
+    padding: 0;
+    /* height: 30vh;
+    width: 30vw; */
+    /* padding-top:100px; */
+  }
+
+  header {
+    display: block;
+    padding-top: 95px;
+  }
+  #nav-bar a, #nav-bar button {
+    font-size: 18px;
+  }
+  #nav-bar button {
+    margin-bottom: 10px;
+  }
+  #make-combo-row p {
+    font-size: 16px;
+  }
+  .boardCard button {
+    width: 30%;  
+  }
+
+  .comboCard button[name=all]{
+    background-color: white;
+    font-size: 27px;
+    margin-top: 10px;
+  }
+
+  .loginpage, .registerpage{
+    width: 80%;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+  .Loginform, .Registerform {
+    text-align: center;
+  }
+  
+
+  .footer-section{
+    margin-top: 20px;
+    
+  }
+
+  }
+  
+
+  
