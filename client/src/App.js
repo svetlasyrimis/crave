@@ -236,7 +236,7 @@ class App extends React.Component {
       combos: prevState.combos.filter(combo => combo.id !== comboId)
     }))
     
-    const resp = await axios.put(`http://localhost:3004/combos/${comboId}`, this.state.currentCombo);
+    const resp = await axios.put(`https://cravemealdrink-api.herokuapp.com/combos/${comboId}`, this.state.currentCombo);
     const favorite = resp.data;
 
     this.setState(prevState => ({
