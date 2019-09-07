@@ -64,7 +64,7 @@ comboRouter.put('/:id', async (req, res) => {
         },
       });
     const combo = await Combo.findByPk(id);
-    // console.log(combo)
+    console.log(combo)
     res.json(combo);
   } catch (e) {
     console.log(e.message);

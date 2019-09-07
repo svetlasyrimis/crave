@@ -111,7 +111,8 @@ class App extends React.Component {
       }
     })
     console.log(this.state.currentCombo)
-    this.props.history.push(`/recipe/${parseInt(comboId)}`)
+    // this.props.history.push(`/recipe/${parseInt(comboId)}`)
+    this.props.history.push(`/recipe/${comboId}`)
   }
 
   componentDidMount = async () => {
@@ -119,19 +120,19 @@ class App extends React.Component {
     const user = await verifyToken();
 
     if (user) {
-      // this.setState({
-      //   currentUser: user,
-      // })
-      // const combos = await fetchUserCombos(user.id);
-      // const favorites = await fetchFavorites(user.id)
+     
+      console.log(user)
+      const combos = await fetchUserCombos(user.id);
+      const favorites = await fetchFavorites(user.id)
       this.setState({
-        // combos: combos,
-        // favorites: favorites,
+       
         currentUser: user,
+        combos: combos,
+        favorites: favorites,
       })
       this.props.history.push(`/home`)
     }
-    // console.log(this.state.currentUser)
+   
   }
 
 
@@ -235,10 +236,7 @@ class App extends React.Component {
       combos: prevState.combos.filter(combo => combo.id !== comboId)
     }))
     
-    
-    // https://mealmatchpandas.herokuapp.com/combos/
-    // https://mealmatch123.herokuapp.com/
-    const resp = await axios.put(`https://mealmatch123.herokuapp.com/combos/${comboId}`, this.state.currentCombo);
+    const resp = await axios.put(`http://localhost:3004/combos/${comboId}`, this.state.currentCombo);
     const favorite = resp.data;
 
     this.setState(prevState => ({
@@ -370,14 +368,8 @@ class App extends React.Component {
                   allcombos={this.state.allcombos}
                 />
               )} />
-              {/* <Route path="/combodetails" render={() => (
-                <ComboDetails
-                  combo={this.state.meal}
-                  handleComboUpdate={this.handleComboUpdate}
-
-                />
-              )} /> */}
-              <Route path="/favorites" render={() => (
+             
+              <Route exact path="/favorites" render={() => (
                 <Faves
                   favorites={this.state.favorites}
                 />

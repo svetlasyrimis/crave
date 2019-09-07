@@ -1,6 +1,6 @@
 import React from 'react';
 import Shuffler from './Shuffler';
-import { withRouter, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import ComboCard from './ComboCard'
 
 
@@ -14,7 +14,8 @@ const ComboBoard = (props) => {
       }}>View all combos</button>
 
       {props.combos.length > 0 ?
-        <Redirect to="/combo" />
+        // <p>Your list is empty, redirecting</p>
+          <Redirect to="/combo" />
         :
         <>
           <Redirect to="/home" />
@@ -26,21 +27,7 @@ const ComboBoard = (props) => {
 
             <Shuffler data={combo} />
             <ComboCard id={combo.id} handleComboDelete={props.handleComboDelete} getComboRecipes={props.getComboRecipes} handleComboUpdate={props.handleComboUpdate}/>
-            {/* <button
-              name={combo.id}
-              onClick={props.handleComboDelete}>Delete</button>
-            <button name={combo.id} onClick={() => {
-
-              props.getComboRecipes(combo.id)
-            }}>Get Info</button>
-
-            <button name={combo.id}
-              onClick={(e) => {
-                e.preventDefault();
-                props.handleComboUpdate(combo.id)
-
-              }}
-              variant="info" >Like<span className="heart">&hearts;</span></button> */}
+           
           </div>
 
 
@@ -56,4 +43,4 @@ const ComboBoard = (props) => {
 
 
 
-export default withRouter(ComboBoard);
+export default ComboBoard;

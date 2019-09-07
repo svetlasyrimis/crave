@@ -21,4 +21,4 @@ const Faves = (props) => {
   )
 }
 
-export default withRouter(Faves);
+export default Faves;

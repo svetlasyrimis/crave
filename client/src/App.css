@@ -2,8 +2,8 @@
 .header header h1{
   width: 100%;
   display: flex; 
-  color: rgb(194, 25, 25);
-  font-size: 180px;
+  color: rgba(148, 54, 54, 0.815);
+  font-size: 160px;
   text-align: center;
   justify-content: space-around; 
   font-family: 'Lobster', cursive;
@@ -11,6 +11,10 @@
   margin-top: 15px;
   padding-top: 50px; 
 }
+
+/* header {
+  height: 180px;
+} */
 
 .header header img {
   margin-top: 40px;
