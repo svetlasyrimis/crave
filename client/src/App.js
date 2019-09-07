@@ -235,8 +235,8 @@ class App extends React.Component {
     this.setState(prevState => ({
       combos: prevState.combos.filter(combo => combo.id !== comboId)
     }))
-    
-    const resp = await axios.put(`https://cravemealdrink-api.herokuapp.com/combos/${comboId}`, this.state.currentCombo);
+    // https://cravemealdrink-api.herokuapp.com
+    const resp = await axios.put(`http://localhost:3004/combos/${comboId}`, this.state.currentCombo);
     const favorite = resp.data;
 
     this.setState(prevState => ({
@@ -263,7 +263,7 @@ class App extends React.Component {
         ...prevState.currentCombo,
         comments: [...prevState.currentCombo.comments,comment]
       },
-      combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
+      // combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
     }))
    
   }
@@ -276,7 +276,7 @@ class App extends React.Component {
         ...prevState.currentCombo,
         comments: prevState.currentCombo.comments.map(comment => comment.id === newComment.id ? newComment : comment)
       },
-      combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
+      // combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
 
     }))
   }
@@ -287,7 +287,7 @@ class App extends React.Component {
         ...prevState.currentCombo,
         comments: prevState.currentCombo.comments.filter(comment => comment.id !== id)
       },
-      combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
+      // combos: [...prevState.combos.filter(combo => combo.id !== prevState.currentCombo.id)]
     }))
   }
 
