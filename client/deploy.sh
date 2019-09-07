@@ -1,6 +1,6 @@
 git add . &&
 git commit -m "refactor" &&
-git push origin fix &&
+git push origin master &&
 npm run build &&
 cd build &&
 mv index.html 200.html &&
