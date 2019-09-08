@@ -10,7 +10,7 @@ export default function Login(props) {
       {
         props.currentView === 'register' && (
           <>
-            <div className="registerpage">
+            <div className="register-page">
               <RegisterForm
                 registerForm={props.registerFormData}
                 handleSubmit={props.handleRegisterSubmit}
@@ -28,7 +28,7 @@ export default function Login(props) {
       {
         props.currentView === 'login' && (
           <>
-            <div className="loginpage">
+            <div className="login-page">
               <LoginForm
                 loginFormData={props.loginFormData}
                 handleSubmit={props.handleLoginSubmit}

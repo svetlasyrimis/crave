@@ -24,7 +24,7 @@ import {
 
 import axios from 'axios';
 import { updateComment, deleteComment } from './services/comments';
-
+import question from './assets/question1.png'
 
 
 
@@ -41,10 +41,10 @@ class App extends React.Component {
       favorites: [],
       meal: {
         food: 'Food',
-        foodImage: 'https://i.imgur.com/A8GTchf.png',
+        foodImage: question,
         foodId: '',
         drink: 'Drink',
-        drinkImage: 'https://i.imgur.com/A8GTchf.png',
+        drinkImage: question,
         drinkId: '',
         isLiked: false
       },
@@ -123,7 +123,8 @@ class App extends React.Component {
      
       console.log(user)
       const combos = await fetchUserCombos(user.id);
-      const favorites = await fetchFavorites(user.id)
+      const favorites = await fetchFavorites(user.id);
+      this.handleViewCombos(user.id);
       this.setState({
        
         currentUser: user,
@@ -166,18 +167,27 @@ class App extends React.Component {
  
   }
 
-  handleLogout = (e) => {
-    e.preventDefault();
+  handleLogout = () => {
+   
     localStorage.getItem('authToken')
     localStorage.removeItem('authToken')
     this.setState({
       isLoggedIn: false,
       currentView: 'login',
-
+      currentUser: null,
       loginFormData: {
         name: '',
         password: '',
-      }
+      },
+      meal: {
+        food: 'Food',
+        foodImage: question,
+        foodId: '',
+        drink: 'Drink',
+        drinkImage: question,
+        drinkId: '',
+        isLiked: false
+      },
 
     })
     console.log(this.state.currentView)
@@ -236,7 +246,7 @@ class App extends React.Component {
       combos: prevState.combos.filter(combo => combo.id !== comboId)
     }))
     // https://cravemealdrink-api.herokuapp.com
-    const resp = await axios.put(`https://cravemealdrink-api.herokuapp.com/combos/${comboId}`, this.state.currentCombo);
+    const resp = await axios.put(`http://localhost:3005/combos/${comboId}`, this.state.currentCombo);
     const favorite = resp.data;
 
     this.setState(prevState => ({
@@ -247,9 +257,9 @@ class App extends React.Component {
 
   }
 
-  handleViewCombos = async () => {
-
-    const combos = await getALL();
+  handleViewCombos = async (id) => {
+    
+    const combos = await getALL(id);
     this.setState({
       allcombos: combos.combos
     })
@@ -314,32 +324,29 @@ class App extends React.Component {
 
     return (
       <div>
-
-        <Header />
-        <main>
-          <>
-            <Route path="/" exact render={() =>
-
-              <Login
-                currentView={this.state.currentView}
-                registerFormData={this.state.registerFormData}
-                handleRegisterSubmit={this.handleRegisterSubmit}
-                handleRegisterFormChange={this.handleRegisterFormChange}
-                toggleAuthView={this.toggleAuthView}
-                loginFormData={this.state.loginFormData}
-                handleLoginSubmit={this.handleLoginSubmit}
-                handleLoginFormChange={this.handleLoginFormChange}
-              />} />
-          </>
-        </main>
-        <div>
-          {this.state.currentUser && (
-            <>
-              <Nav handleLogout={this.handleLogout}/>
-              <Route path="/home" exact render={() => (
+              <main>
+              <Route path="/" exact render={() =>
                 <>
-                  
-                  <p>Hello {this.state.currentUser.name}!</p>
+                  <Header />
+                  <Login
+                    currentView={this.state.currentView}
+                    registerFormData={this.state.registerFormData}
+                    handleRegisterSubmit={this.handleRegisterSubmit}
+                    handleRegisterFormChange={this.handleRegisterFormChange}
+                    toggleAuthView={this.toggleAuthView}
+                    loginFormData={this.state.loginFormData}
+                    handleLoginSubmit={this.handleLoginSubmit}
+                    handleLoginFormChange={this.handleLoginFormChange}
+                  /></>} />
+            
+           </main>
+          {this.state.currentUser && 
+            
+            <>
+              <Nav handleLogout={this.handleLogout} />
+              
+              <Route path="/home" exact render={() => (
+                
                   <MakeCombo
                     isLoggedIn={this.state.isLoggedIn}
                     currentView={this.state.currentView}
@@ -347,11 +354,13 @@ class App extends React.Component {
                     meal={this.state.meal}
                     fetchMealDrink={this.fetchMealDrink}
                     changeBoard={this.changeBoard}
+                    currentUser={this.state.currentUser}
                   />
-                </>
+                
               )} />
 
               <Route path="/combo" render={() => (
+                
                 <ComboBoard
                   getComboRecipes={this.getComboRecipes}
                   isToggleOn={this.state.isToggleOn}
@@ -386,10 +395,11 @@ class App extends React.Component {
                 />
               )} />
 
+           
             </>
-          )}
+          }
 
-        </div>
+       
         <Footer />
 
       </div>

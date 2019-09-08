@@ -1,8 +1,8 @@
 import { api } from './auth';
 
 
-export const getALL = async () => {
-  const resp = await api.get(`combos/all`);
+export const getALL = async (id) => {
+  const resp = await api.get(`combos/${id}/all`);
   console.log(resp.data)
   return resp.data
 }

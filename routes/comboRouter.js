@@ -1,15 +1,23 @@
 const { Router } = require('express');
 const { Combo, User, Comment } = require('../models');
 const { restrict } = require('../auth');
+const { Op } = require('sequelize');
 const comboRouter = Router();
 
 comboRouter.get('/', (req, res) => {
   res.json({ combo: "get route" });
 });
 
-comboRouter.get('/all', async (req, res) => {
+comboRouter.get('/:id/all', async (req, res) => {
+  const id = req.params.id;
   const combos = await Combo.findAll({
-    include: [Comment]
+    where: {
+      user_id: {
+        [Op.ne]: id
+      }
+    },
+    include: [{ model: Comment }],
+    include: [{ model: User }]
   });
   
   res.json({ combos });

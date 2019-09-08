@@ -1,6 +1,6 @@
 import React from 'react'
 import Shuffler from './Shuffler'
-import { withRouter, Redirect } from 'react-router-dom'
+
 
 const Faves = (props) => {
   console.log(props)

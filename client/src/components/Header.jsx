@@ -3,11 +3,11 @@ import logo from '../assets/mealm.jpg'
 
 function Header() {
   return (
-    <div className="header">
-      <header>
-        <img src={logo} alt="header" />
+    <div className="nav-login">
+      
+        <img className="logo-image" src={logo} alt="logo" />
         <h1>Crave</h1>
-      </header>
+     
     </div>
   )
 }

@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { User,Combo } = require('../models');
 const bcrypt = require('bcrypt');
 const { genToken, restrict } = require('../auth');
-
+const { Op } = require('sequelize');
 const userRouter = Router();
 const SALT = 2;
 
@@ -75,5 +75,7 @@ userRouter.get('/:id/favorites', async (req, res) => {
   console.log(combos);
   res.json({combos})
 })
+
+
 
 module.exports = userRouter

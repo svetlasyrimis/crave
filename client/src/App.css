@@ -1,4 +1,19 @@
-
+.body {
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+}
+.nav-login {
+  width: 100%;
+  margin:10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245)); */
+}
+.logo-image {
+  height: 150px;
+}
 .header header h1{
   width: 100%;
   display: flex; 
@@ -12,9 +27,7 @@
   padding-top: 50px; 
 }
 
-/* header {
-  height: 180px;
-} */
+
 
 .header header img {
   margin-top: 40px;
@@ -29,7 +42,6 @@ header {
   display: flex; 
   align-content: center;
   text-align: center;
-  border-bottom: 5px solid black; 
   background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
 }
 
@@ -42,14 +54,13 @@ div p{
 
 #nav-bar {
   width: 100%;
-  position: fixed; 
-  height: 100px; 
-  justify-content: space-around;
-  background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
+  padding: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
   top: 0;
-  z-index: 10;
+  
 }
 
 .heart {
@@ -69,36 +80,40 @@ div p{
   color: rgb(194, 25, 25);
 }
 
-.shuffler div{
+.shuffler {
   font-family: 'Lobster', cursive;
   font-size: 25px;
-}
-
-.shuffler h1{
-  font-family: 'Lobster', cursive;
-  font-size: 50px;
-}
-
-.shuffler{
   align-content: center;
   text-align: center;
+  padding : 30px;
+  height: auto;
+  
 }
 
-.log{
+
+
+
+form {
+  padding : 10px;
+  margin: 10px;
+}
+
+.login-form {
   display: flex; 
   flex-direction: column;
-  width: 150px; 
-  margin: 0 auto;
-
-}
-
-
-.Loginform {
+  align-items: center;
+  justify-content: center;
   
-  align-content: center;
+}
+.register-form {
   text-align: center;
-  
+  display: block; 
+  padding: 10px;
+  margin :10px;
+  /* font-size: x-large; */
 }
+
+
 
 .reg{
   display: flex; 
@@ -107,11 +122,6 @@ div p{
   flex-direction: column;
 }
 
-.Registerform{
-  align-content: center;
-  text-align: center;
-  display: block; 
-}
 
 .button{
   align-content: center;
@@ -123,25 +133,42 @@ div p{
   font-size:1.5em;
   color:red;
 }
-.comboCard {
+.combo-board {
   background-color: lightblue; 
-}
-
-.row {
-  background-color: white; 
-  border-radius: 50px 50px 50px 50px; 
-  padding-top: 45px; 
-  padding-bottom: 10px; 
-  box-shadow: 10px 10px 5px grey;
-
-}
-
-.container{
-  margin-top: 15px; 
-  margin-bottom: 40px; 
   
 }
 
+
+
+.picture {
+  height: 390px !important;
+}
+.card1 {
+  /* width: 98vw; */
+  border:1 px black;
+ 
+}
+
+.container{
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center; 
+  
+}
+.image {
+  width: fit-content;
+}
+.image-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+ 
+}
 .shuffler {
   background-color: lightblue;
 
@@ -156,12 +183,12 @@ div p{
   font-family: 'Lobster', cursive;
 }
 
-.boardCard {
+.combo-card {
   text-align: center;
 }
 
 
-.boardCard button {
+.combo-card button {
   align-content: center;
   text-align: center;
   font-family: 'Lobster', cursive;
@@ -178,105 +205,83 @@ div p{
 }
 
 
-.comboCard {
+.combo-board {
   text-align: center;
 }
 
 
-.comboCard button{
+.combo-board button{
   font-family: 'Lobster', cursive;
   font-size: 20px; 
 }
 
 
 .comboHeaders h4{
+  
   text-align: center;
   font-size: 55px; 
   font-family: 'Lobster', cursive;
 }
 
 /* Log In Form */
-.loginpage{
+.login-page{
   background-image: linear-gradient(to right, white, hsla(190, 48%, 80%, 0.687), white);
   box-shadow: 34px 13px 36px 5px rgba(55,56,56,1);
-  margin-left: 250px; 
-  margin-top: 30px;
-  margin-right: 250px;
-  padding-top: 25px;
-  padding-bottom: 15px; 
-  border-radius: 50px 50px 50px 50px;
-}
-
-.Loginform h3, label {
-  font-family: 'Lobster', cursive;
-}
-
-.Loginform {
-  margin-top: 25px;
-}
-
-.button {
-  padding-bottom: 35px;
   
+  text-align: center;
+  padding: 20px;
+  width: 60vw;
+  height: 60vh;
+  border-radius: 10%;
+ 
 }
 
-.Loginform label {
-  font-size: 25px;
+label {
+  font-family: 'Lobster', cursive;
+  font-size: 26px;
 }
 
-.Loginform h3{
+#password {
+  margin-bottom:10px
+}
+
+
+
+
+.login-form h3{
   font-size: 35px;
 }
 
-.Loginform input {
+.login-form input, .register-form input{
   margin-bottom: 15px;
   font-family: 'Lobster', cursive;
   font-size: 20px;
 }
 
-.loginpage .button {
+.login-page .button, .register-page .button {
   font-family: 'Lobster', cursive;
   font-size: 22px;
-  margin-top: 10px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
 /* Register Form */
-.registerpage {
+.register-page {
+  text-align: center;
+  padding: 20px;
+  width: 60vw;
+  height: 72vh;
   background-image: linear-gradient(to right, white, hsla(190, 48%, 80%, 0.687), white);
   box-shadow: 34px 13px 36px 5px rgba(55,56,56,1);
-  margin-left: 250px; 
-  margin-top: 30px;
-  margin-right: 250px;
-  padding-top: 25px;
-  padding-bottom: 15px; 
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 10%;
 }
 
-.Registerform h3{
-  font-size: 35px;
-}
 
-.Registerform h3, label {
-  font-family: 'Lobster', cursive;
-}
-
-.Registerform {
-  margin-top: 25px;
-}
-
-.Registerform label {
-  font-size: 25px;
-}
-
-.Registerform h3{
-  font-size: 35px;
-}
-
-.Registerform input {
-  margin-bottom: 15px;
-  font-family: 'Lobster', cursive;
-  font-size: 20px;
-}
 
 .registerpage .button {
   font-family: 'Lobster', cursive;
@@ -331,7 +336,7 @@ div p{
    
 }
 
-.comboCard button[name=all]{
+.combo-board button[name=all]{
   margin-top: 20px;
   font-size: 35px;
 }
@@ -352,6 +357,17 @@ div p{
   font-weight: bold;
 }
 
+.logo {
+  height: 60px;
+}
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.subtitle {
+  font-size: 26px;
+
+}
 @media only screen 
   and (max-width: 480px) {
     .header header h1{
@@ -363,9 +379,7 @@ div p{
   .header header img{
     margin: 0;
     padding: 0;
-    /* height: 30vh;
-    width: 30vw; */
-    /* padding-top:100px; */
+   
   }
 
   header {
@@ -381,11 +395,11 @@ div p{
   #make-combo-row p {
     font-size: 16px;
   }
-  .boardCard button {
+  .combo-card button {
     width: 30%;  
   }
 
-  .comboCard button[name=all]{
+  .combo-board button[name=all]{
     background-color: white;
     font-size: 27px;
     margin-top: 10px;
