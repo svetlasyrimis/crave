@@ -188,7 +188,7 @@ class App extends React.Component {
         drinkId: '',
         isLiked: false
       },
-
+      allcombos: []
     })
     console.log(this.state.currentView)
     this.props.history.push('/');

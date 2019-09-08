@@ -5,10 +5,10 @@ class Footer extends React.Component {
     return (
       <>
         <div className="footer-section">
-          <p><span className="bold">Email:</span> fullstackpandas@me.com</p>
-          <small> a GA company</small >
-          <br />
-          <small>&copy; Pandas 2019</small>
+          <p><span className="bold">Email:</span> crave@gmail.com</p>     
+          
+          <small>&copy; Crave 2019</small>
+          <br/>
         </div>
       </>
     )

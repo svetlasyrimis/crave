@@ -12,7 +12,8 @@ const AllCombos = (props) => {
         
 
         {props.allcombos && props.allcombos.map(combo => (
-          <div className="boardCard" key={combo.id}>
+          <div className="combo-board" key={combo.id}>
+            <hr/>
             <p>Added by {combo.user.name}</p>
             <Shuffler data={combo} />
           </div>

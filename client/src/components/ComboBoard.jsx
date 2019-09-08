@@ -8,12 +8,10 @@ const ComboBoard = (props) => {
   console.log(props)
   return (
     <div className="combo-board">
-      <Link to="/allcombos">View all combos</Link>
-      {/* <button name="all" onClick={() => {
-        props.handleViewCombos()
-        props.history.push('/allcombos')
-      }}>View all combos</button> */}
-
+      <Link to="/allcombos"><button className="btn-secondary">Get inspired</button></Link>
+     
+      <hr />
+      <p>Your Board</p>
       {props.combos.length > 0 ?
        
           <Redirect to="/combo" />
