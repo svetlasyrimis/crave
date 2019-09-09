@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ComboCard extends Component {
+export default class ComboButtons extends Component {
   constructor(props) {
     console.log(props)
     super(props)
@@ -19,28 +19,37 @@ export default class ComboCard extends Component {
   render() {
     return (
       <>
-        {!this.state.isAdded && <><button
-          name={this.props.id}
-          onClick={this.props.handleComboDelete}>Delete</button>
-          <button name={this.props.id} onClick={() => {
+        {!this.state.isAdded && <>
+          
+          <button
+            name={this.props.id}
+            className="combo-button"
+            onClick={this.props.handleComboDelete}>Delete</button>
+          
+          <button className="combo-button details" name={this.props.id} onClick={() => {
 
             this.props.getComboRecipes(this.props.id)
-          }}>Get Info</button>
+          }}>Get Recipes</button>
 
           <button name={this.props.id}
+            className="combo-button like"
             onClick={(e) => {
               e.preventDefault();
               this.props.handleComboUpdate(this.props.id);
               this.handleAdd();
 
             }}
-            variant="info" >Like<span className="heart">&hearts;</span></button></>}
+            variant="info" >Like</button></>}
+        {/* <span className="heart">&hearts;</span> */}
         {this.state.isAdded && <>
           <button
+            className="combo-button"
             name={this.props.id}
             onClick={this.props.handleComboDelete}>Delete</button>
-          <button name={this.props.id} onClick={() => {
-
+          
+          <button name={this.props.id}
+            className="combo-button" onClick={() => {
+            
             this.props.getComboRecipes(this.props.id)
           }}>Get Info</button>
           <p><strong>Liked<span className="heart">&hearts;</span><span>&#10004;</span></strong> </p>

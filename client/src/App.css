@@ -149,7 +149,32 @@ form {
   align-items: center;
   
 }
-
+.combo-button {
+  color: black;
+  border:none;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 25px; 
+  background-color: white;
+  border-radius: 10%;
+  transition: 0.3s all ease-in-out;
+}
+.combo-button:hover {
+  background-color: rgb(44, 43, 43);
+  color:white;
+  font-weight: bold;
+  
+  
+}
+.details:hover {
+  background-color: rgba(50, 190, 167, 0.753);
+  color:white;
+}
+.like:hover {
+  background-color: rgba(190, 50, 50, 0.753);
+  color:white;
+}
 
 
 .picture {
@@ -382,6 +407,13 @@ main {
 
 .card-text {
   font-family: 'Yanon-e Kaffeesatz', sans-serif;
+  font-size: 16px;
+}
+.card-body {
+  padding: 10px;
+}
+.card {
+  width: 60vw;
 }
 
 .footer-section{

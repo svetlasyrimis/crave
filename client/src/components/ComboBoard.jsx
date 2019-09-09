@@ -1,7 +1,7 @@
 import React from 'react';
 import Shuffler from './Shuffler';
 import { Redirect,Link } from 'react-router-dom'
-import ComboCard from './ComboCard'
+import ComboButtons from './ComboButtons'
 
 
 const ComboBoard = (props) => {
@@ -25,7 +25,7 @@ const ComboBoard = (props) => {
           <div className="combo-card" key={combo.id}>
 
             <Shuffler data={combo} />
-            <ComboCard id={combo.id} handleComboDelete={props.handleComboDelete} getComboRecipes={props.getComboRecipes} handleComboUpdate={props.handleComboUpdate}/>
+            <ComboButtons id={combo.id} handleComboDelete={props.handleComboDelete} getComboRecipes={props.getComboRecipes} handleComboUpdate={props.handleComboUpdate}/>
            
           </div>
 

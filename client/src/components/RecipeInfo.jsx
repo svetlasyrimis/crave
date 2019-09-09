@@ -47,24 +47,25 @@ class RecipeInfo extends React.Component {
           <div id='container'>
           
             <>
-              <Card style={{ width: '50%' }}>
+              <Card style={{ width: '100%' }}>
                 <Card.Img variant="top" src={this.props.currentCombo.meal.strMealThumb} />
                 <Card.Body>
+               
                   <Card.Title>{this.props.currentCombo.meal.strMeal}</Card.Title>
                   <Card.Text>
                     {this.props.currentCombo.meal.strInstructions}
                   </Card.Text>
-                  {/* <Button variant="primary">Go somewhere</Button> */}
+                 
                 </Card.Body>
               </Card>
-              <Card style={{ width: '50%' }}>
+              <Card style={{ width: '100%' }}>
                 <Card.Img variant="top" src={this.props.currentCombo.drink.strDrinkThumb} />
                 <Card.Body>
                   <Card.Title>{this.props.currentCombo.drink.strDrink}</Card.Title>
                   <Card.Text>
                     {this.props.currentCombo.drink.strInstructions}
                   </Card.Text>
-                  {/* <Button variant="primary">Go somewhere</Button> */}
+                  
                 </Card.Body>
               </Card>
             </>

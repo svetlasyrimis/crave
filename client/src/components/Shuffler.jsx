@@ -30,46 +30,12 @@ const Shuffler = (props) => {
               timingFunction={"ease-in-out"}
               duration={800}
               alt='dr' />
-            <p>{drink}</p></div>
-        
-          
+            <p>{drink}</p></div> 
      </div>
      
     </>
   )
 }
 
-// const Shuffler = (props) => {
-//   const { food, foodImage, drink, drinkImage } = props.data;
-//   return (
-//     <>
-//       <Container >
-//         <Row className="card1">
-//           <div className="card1">
-//           <Col xs={{ span: 3 }}>
-//           <CrossfadeImage src={foodImage}
-//               style={
-//               { maxWidth: "100%", borderRadius: "20%" }
-//             }
-//               timingFunction={"ease-in-out"}
-//               duration={800}
-//               alt="food" />
-//             <p>{food}</p>
-//           </Col>
-//           <Col xs={{ span: 3 }}>
-//            <CrossfadeImage src={drinkImage}
-//               style={{ maxWidth: "100%", borderRadius: "20%" }}
-//               timingFunction={"ease-in-out"}
-//               duration={800}
-//               alt='dr' />
-//             <p>{drink}</p>
-//             </Col>
-//             </div>
-//         </Row>
-//       </Container >
-     
-//     </>
-//   )
-// }
 
 export default Shuffler
