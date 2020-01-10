@@ -92,7 +92,6 @@ class App extends React.Component {
     this.setState(prevState => ({
       combos: [combo, ...prevState.combos]
     }));
-    console.log(this.state.combos)
   }
 
 
@@ -120,8 +119,6 @@ class App extends React.Component {
     const user = await verifyToken();
 
     if (user) {
-     
-      console.log(user)
       const combos = await fetchUserCombos(user.id);
       const favorites = await fetchFavorites(user.id);
       this.handleViewCombos(user.id);
@@ -190,7 +187,7 @@ class App extends React.Component {
       },
       allcombos: []
     })
-    console.log(this.state.currentView)
+    
     this.props.history.push('/');
   }
 
@@ -209,7 +206,7 @@ class App extends React.Component {
   handleRegisterSubmit = async (ev) => {
     ev.preventDefault();
     const user = await createUser(this.state.registerFormData);
-    console.log(user);
+    
     this.setState({
       registerForm: {
         name: '',
@@ -252,9 +249,6 @@ class App extends React.Component {
     this.setState(prevState => ({
       favorites: [favorite, ...prevState.favorites]
     }));
-    console.log(this.state.favorites)
-
-
   }
 
   handleViewCombos = async (id) => {
@@ -264,7 +258,6 @@ class App extends React.Component {
     this.setState({
       allcombos
     })
-    console.log(this.state.allcombos)
   }
 
   addNewComment = (comment) => {
