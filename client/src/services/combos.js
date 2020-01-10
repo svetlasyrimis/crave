@@ -32,8 +32,5 @@ export const fetchFavorites = async (id) => {
   return resp.data.combos
 }
 
-// export const getAllCombos = async () => {
-//   const resp = await api.get(`combos/all`);
-//   return resp.data.combos
-// }
+
 
