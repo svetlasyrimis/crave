@@ -4,7 +4,7 @@ export default (props) => (
   <>
 
     <div className="register-form">
-      <h3>Register Form</h3>
+      <h3>Register</h3>
       <form className="reg" onSubmit={props.handleSubmit}>
         <label
           htmlFor="name">Username</label>
