@@ -31,10 +31,10 @@ comboRouter.post('/', restrict, async (req, res) => {
 
   const newCombo = await Combo.create(req.body);
   const user = await User.findByPk(res.locals.id);
-  (user.id);
+  
   // (name)
   const answer = await newCombo.setUser(user);
-  (answer.dataValues);
+ 
   const combo = await Combo.findByPk(newCombo.id, {
     include: [Comment]
   })
@@ -51,7 +51,7 @@ comboRouter.delete('/:id', restrict, async (req, res) => {
     })
     res.json(`Success, combo is ${req.params.id} has been destroyed`);
   } catch (e) {
-    (e)
+    console.log(e)
     res.status(401).send("Can't be deleted");
   }
 
@@ -77,10 +77,10 @@ comboRouter.put('/:id', async (req, res) => {
       },
     });
     const combo = await Combo.findByPk(id);
-    (combo)
+    
     res.json(combo);
   } catch (e) {
-    (e.message);
+    console.log(e.message);
     res.status(500).send(e.message);
   }
 });
