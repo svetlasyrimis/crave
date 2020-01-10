@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class ComboButtons extends Component {
   constructor(props) {
-    console.log(props)
+    
     super(props)
     this.state = {
       isAdded: false
@@ -20,12 +20,12 @@ export default class ComboButtons extends Component {
     return (
       <>
         {!this.state.isAdded && <>
-          
+
           <button
             name={this.props.id}
             className="combo-button"
             onClick={this.props.handleComboDelete}>Delete</button>
-          
+
           <button className="combo-button details" name={this.props.id} onClick={() => {
 
             this.props.getComboRecipes(this.props.id)
@@ -46,14 +46,14 @@ export default class ComboButtons extends Component {
             className="combo-button"
             name={this.props.id}
             onClick={this.props.handleComboDelete}>Delete</button>
-          
+
           <button name={this.props.id}
             className="combo-button" onClick={() => {
-            
-            this.props.getComboRecipes(this.props.id)
-          }}>Get Info</button>
+
+              this.props.getComboRecipes(this.props.id)
+            }}>Get Info</button>
           <p><strong>Liked<span className="heart">&hearts;</span><span>&#10004;</span></strong> </p>
-          
+
         </>
 
         }

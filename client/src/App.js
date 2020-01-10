@@ -259,9 +259,10 @@ class App extends React.Component {
 
   handleViewCombos = async (id) => {
     
-    const combos = await getALL(id);
+    const allcombos = await getALL(id);
+    this.shuffle(allcombos)
     this.setState({
-      allcombos: combos.combos
+      allcombos
     })
     console.log(this.state.allcombos)
   }
@@ -318,6 +319,15 @@ class App extends React.Component {
     this.setState(prevState => ({
       currentView: prevState.currentView === 'register' ? 'login' : 'register'
     }));
+  }
+
+  shuffle = (array) => {
+    
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
   }
 
   render() {

@@ -3,7 +3,7 @@ import Shuffler from './Shuffler'
 
 
 const Faves = (props) => {
-  console.log(props)
+  
   return (
 
     <div className="comboHeaders">

@@ -12,7 +12,7 @@ userRouter.post('/', async (req, res) => {
   const pwDigest = await bcrypt.hash(password, SALT);
 
 
-  console.log(pwDigest);
+  (pwDigest);
   const user = await User.create({
     name: name,
     password_digest: pwDigest,
@@ -22,9 +22,9 @@ userRouter.post('/', async (req, res) => {
 
   const { password_digest, ...userData } = user.dataValues;
   const token = genToken(userData)
-  console.log(user.dataValues);
+  (user.dataValues);
   res.json({ user: userData, token });
-  console.log(user.dataValues);
+  (user.dataValues);
 });
 
 userRouter.post('/login', async (req, res) => {
@@ -32,17 +32,17 @@ userRouter.post('/login', async (req, res) => {
     const { name, password } = req.body;
     const user = await User.findOne({ where: { name } });
     const isValidPass = await bcrypt.compare(password, user.password_digest);
-    console.log(isValidPass);
+    (isValidPass);
     if (isValidPass) {
       const { password_digest, ...userData } = user.dataValues;
       const token = genToken(userData);
-      console.log(userData)
+      (userData)
       res.json({ token, user: userData });
     } else {
       res.status(401).send('Invalid credentials');
     }
   } catch (e) {
-    console.log(e.message);
+    (e.message);
     res.status(401).send('Invalid credentials');
   }
 });
@@ -53,26 +53,26 @@ userRouter.get('/verify', restrict, (req, res) => {
 
 userRouter.get('/:id/combos', async (req, res) => {
   const id = req.params.id;
-  console.log(id)
+  (id)
   const combos = await Combo.findAll({
     where: {
       userId: id
     }
   })
-  console.log(combos);
+  (combos);
   res.json({combos})
 })
 
 userRouter.get('/:id/favorites', async (req, res) => {
   const id = req.params.id;
-  console.log(id)
+  (id)
   const combos = await Combo.findAll({
     where: {
       userId: id,
       isLiked: true
     }
   })
-  console.log(combos);
+  (combos);
   res.json({combos})
 })
 

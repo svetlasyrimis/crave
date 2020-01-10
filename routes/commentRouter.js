@@ -16,7 +16,7 @@ commentRouter.get('/', async (req, res) => {
 commentRouter.post('/', async (req, res) => {
   const combo = await Combo.findByPk(req.body.combo)
   const comment = await combo.createComment({ comment: req.body.comment });
-  console.log(comment);
+  (comment);
   res.json({ comment })
 });
 
@@ -33,7 +33,7 @@ commentRouter.put('/:id', async (req, res) => {
 
     res.json({ comment });
   } catch (e) {
-    console.log(e.message);
+    (e.message);
     res.status(500).send(e.message);
   }
 })
@@ -43,7 +43,7 @@ commentRouter.delete('/:id', async (req, res) => {
     await Comment.destroy({ where: { id: req.params.id } })
     res.status(204).end()
   } catch (e) {
-    console.log(e.message);
+    (e.message);
     res.status(500).send(e.message);
   }
 })
