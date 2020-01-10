@@ -477,12 +477,10 @@ main {
     }
 }
 
-@media screen
-  and (max-width: 600px)
-  and (min-height: 700px) {
-    main {
-      height: 90vh;
-    }
+@media only screen and (min-device-width: 740px) and (orientation: landscape) {
+  main {
+    height: -webkit-fill-available;
+  }
 }
   
 
