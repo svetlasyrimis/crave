@@ -2,12 +2,13 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
   outline: none !important;
+  font-family: 'Baskervville', serif;
 }
 
 .body {
   margin: 0;
-  font-family: 'Lobster', cursive;
-  font-size: 16px;
+  font-family: 'Baskervville', serif;
+  /* font-size: 16px; */
   background-color: lightblue; 
 }
 .nav-login {
@@ -28,7 +29,6 @@
   font-size: 160px;
   text-align: center;
   justify-content: space-around; 
-  font-family: 'Lobster', cursive;
   margin-right: 180px;
   margin-top: 15px;
   padding-top: 50px; 
@@ -45,6 +45,7 @@
 }
 
 header {
+  font-family: 'Baskervville', serif;
   margin-top: 0px;
   display: flex; 
   align-content: center;
@@ -55,8 +56,6 @@ header {
 div p{
   text-align: center;
   font-size: 25px;
-  font-family: 'Lobster', cursive;
-
 }
 
 #nav-bar {
@@ -81,7 +80,6 @@ hr {
 #nav-bar a{
   justify-content: space-between;
   text-decoration: none;
-  font-family: 'Lobster', cursive;
   color: black;
   font-size: 30px;
   
@@ -92,7 +90,6 @@ hr {
 }
 
 .shuffler {
-  font-family: 'Lobster', cursive;
   font-size: 25px;
   align-content: center;
   text-align: center;
@@ -144,6 +141,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; 
+  font-family: 'Baskervville', serif;
 }
 
 .combo-button {
@@ -151,7 +149,6 @@ form {
   border:none;
   padding: 10px;
   margin: 10px;
-  font-family: 'Lobster', cursive;
   font-size: 25px; 
   background-color: white;
   border-radius: 10%;
@@ -204,14 +201,6 @@ form {
   background-color: lightblue;
 }
 
-.shuffler h2 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-.shuffler h2 {
-  font-family: 'Lobster', cursive;
-}
-
 .combo-card {
   text-align: center;
 }
@@ -220,7 +209,6 @@ form {
 .combo-card button {
   align-content: center;
   text-align: center;
-  font-family: 'Lobster', cursive;
   font-size: 20px; 
   justify-content: space-around;
   margin-bottom: 45px; 
@@ -241,7 +229,6 @@ form {
 
 
 .combo-board button{
-  font-family: 'Lobster', cursive;
   font-size: 20px; 
 }
 
@@ -253,7 +240,6 @@ form {
 .comboHeaders h4{
   text-align: center;
   font-size: 55px; 
-  font-family: 'Lobster', cursive;
   background-color: lightblue; 
 }
 
@@ -269,7 +255,6 @@ form {
 }
 
 label {
-  font-family: 'Lobster', cursive;
   font-size: 26px;
 }
 
@@ -283,12 +268,10 @@ label {
 
 .login-form input, .register-form input{
   margin-bottom: 15px;
-  font-family: 'Lobster', cursive;
   font-size: 20px;
 }
 
 .login-page .button, .register-page .button {
-  font-family: 'Lobster', cursive;
   font-size: 22px;
 }
 
@@ -297,6 +280,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to left, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
+  ;
  
 }
 /* Register Form */
@@ -313,13 +298,11 @@ main {
 
 
 .registerpage .button {
-  font-family: 'Lobster', cursive;
   font-size: 22px;
   margin-top: 10px;
 }
 
 .shuffler button {
-  font-family: 'Lobster', cursive;
   font-size: 25px;
   background-color: rgb(194, 25, 25);
   color: white;
@@ -332,7 +315,7 @@ main {
 .btn-primary {
   color: black;
   border:none;
-  font-family: 'Lobster', cursive;
+
   font-size: 25px; 
   background-color: white;
   border-radius: 10%;
@@ -347,7 +330,6 @@ main {
 .btn-secondary {
   color: black;
   border:none;
-  font-family: 'Lobster', cursive;
   font-size: 25px; 
   margin-bottom: 10px;
   padding: 10px;
@@ -371,10 +353,9 @@ main {
 }
 
 #container {
-  border: solid 1px #ff0000;
   text-align: center;
   margin: 0px auto;
-  width: 60%;
+  padding: 10px;
   display: flex;
 }
 
@@ -385,7 +366,6 @@ main {
 
 
 .card-text {
-  font-family: 'Yanon-e Kaffeesatz', sans-serif;
   font-size: 16px;
 }
 .card-body {
@@ -433,10 +413,26 @@ main {
    
   }
 
+  .login-page,.register-page {
+    width: 80%;
+  }
 
+  main {
+    height: -webkit-fill-available;
+  }
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
   header {
     display: block;
     /* padding-top: 95px; */
+  }
+  #nav-bar {
+    padding: 10px 0;
+  }
+  .btn {
+    padding: 2px;
   }
   #nav-bar a, #nav-bar button {
     font-size: 18px;
@@ -466,6 +462,9 @@ main {
 
   .Loginform, .Registerform {
     text-align: center;
+  }
+  .comboHeaders h4{
+    font-size: 25px;
   }
   
 }

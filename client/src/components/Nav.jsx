@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import logo from '../assets/mealm.jpg'
+import logo from '../assets/mealm.png'
 
 const Nav = (props) => {
   return (
