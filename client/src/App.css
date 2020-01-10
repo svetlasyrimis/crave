@@ -242,7 +242,7 @@ form {
   padding: 10px;
 }
 
-.comboHeaders h4{
+.comboHeaders h3{
   text-align: center;
   font-size: 55px; 
   background-color: lightblue; 
@@ -479,9 +479,9 @@ main {
   .Loginform, .Registerform {
     text-align: center;
   }
-  .comboHeaders h4{
+  /* .comboHeaders h4{
     font-size: 25px;
-  }
+  } */
   
 }
 
