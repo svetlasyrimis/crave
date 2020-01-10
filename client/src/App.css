@@ -74,6 +74,10 @@ div p{
   color: red;
 }
 
+hr {
+  border-color:black;
+  margin-top: 0 !important;
+}
 #nav-bar a{
   justify-content: space-between;
   text-decoration: none;
@@ -134,7 +138,7 @@ form {
   color:red;
 }
 .combo-board {
-  padding:20px;
+  /* padding:20px; */
   background-color: lightblue; 
   display: flex;
   flex-direction: column;
@@ -231,7 +235,8 @@ form {
 
 .combo-board {
   text-align: center;
-  padding: 40px;
+  padding-top: 20px;
+  /* padding: 40px; */
 }
 
 
@@ -428,9 +433,10 @@ main {
    
   }
 
+
   header {
     display: block;
-    padding-top: 95px;
+    /* padding-top: 95px; */
   }
   #nav-bar a, #nav-bar button {
     font-size: 18px;
@@ -441,9 +447,9 @@ main {
   #make-combo-row p {
     font-size: 16px;
   }
-  .combo-card button {
+  /* .combo-card button {
     width: 30%;  
-  }
+  } */
 
   .combo-board button[name=all]{
     background-color: white;
@@ -462,12 +468,15 @@ main {
     text-align: center;
   }
   
-
-  .footer-section{
-    margin-top: 20px;
-    
-  }
 }
+
+@media only screen 
+  and (max-width: 990px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   
 
   

@@ -20,11 +20,13 @@ const ComboBoard = (props) => {
       {props.combos && props.combos.map(combo => (
         <div key={combo.id}>
           <div className="combo-card" key={combo.id}>
+            <p>Combo N{combo.id}</p>
             <Shuffler data={combo} />
             <ComboButtons id={combo.id}
               handleComboDelete={props.handleComboDelete}
               getComboRecipes={props.getComboRecipes}
               handleComboUpdate={props.handleComboUpdate} />
+            <hr/>
           </div>
         </div>
       ))}
