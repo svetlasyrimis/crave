@@ -42,7 +42,7 @@ class RecipeInfo extends React.Component {
     return (
       <>
         {this.props.currentCombo &&
-          <>
+          <div className="combo-board">
             <div id='container'>
               <>
                 <Card style={{ width: '100%' }}>
@@ -66,7 +66,7 @@ class RecipeInfo extends React.Component {
               </>
             </div>
             <div>
-              <form onSubmit={this.handleSubmit}>
+              <form className="comment-form" onSubmit={this.handleSubmit}>
                 <input
                   name="comment"
                   onChange={this.handleChange}
@@ -80,7 +80,7 @@ class RecipeInfo extends React.Component {
                 <div key={comment.id}>
                   {
                     this.state.isEdit === comment.id ?
-                      <form onSubmit={() => {
+                      <form className="comment-form" onSubmit={() => {
                         this.props.putComment(comment.id, this.state.editComment);
                         this.setState({
                           isEdit: null,
@@ -93,25 +93,25 @@ class RecipeInfo extends React.Component {
                           value={this.state.editComment}
                           onChange={this.handleChange}
                         />
-                        <button>Submit</button>
+                        <button className="combo-button">Submit</button>
                       </form>
                       :
                       <>
                         <div><p>{comment.comment}</p>
-                          <button onClick={() => {
+                          <button className="combo-button" onClick={() => {
                             this.setState({
                               isEdit: comment.id,
                               editComment: comment.comment
                             })
                           }}> Edit </button>
-                          <button onClick={() => this.props.destroyComment(comment.id)}>Delete</button>
+                          <button className="combo-button" onClick={() => this.props.destroyComment(comment.id)}>Delete</button>
                         </div>
                       </>
                   }
                 </div>
               ))}
             </div>
-          </>
+          </div>
         }
       </>
     )

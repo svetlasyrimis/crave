@@ -9,7 +9,7 @@ const ComboBoard = (props) => {
     <div className="combo-board">
       <Link to="/allcombos"><button className="btn-secondary">Get inspired</button></Link>
       <hr />
-      <p>Your Board</p>
+      <h4>Your Board</h4>
       {props.combos.length > 0 ?
         <Redirect to="/combo" />
         :

@@ -3,13 +3,16 @@
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
   outline: none !important;
   font-family: 'Baskervville', serif;
+  /* 
+   */
 }
 
 .body {
   margin: 0;
   font-family: 'Baskervville', serif;
   /* font-size: 16px; */
-  background-color: lightblue; 
+  
+
 }
 .nav-login {
   width: 100%;
@@ -182,6 +185,8 @@ form {
   flex-direction: row; 
   align-items: center;
   justify-content: center; 
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   
 }
 
@@ -354,9 +359,12 @@ main {
 
 #container {
   text-align: center;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 10px;
   display: flex;
+  width: 80%;
+  background-color: lightblue; 
+
 }
 
 .combo-board button[name=all]{
@@ -397,8 +405,15 @@ main {
 }
 .subtitle {
   font-size: 26px;
+}
+
+.comment-form {
+  background-image: linear-gradient(to left, white, white,rgb(200, 233, 245), rgb(200, 233, 245));
+  display: flex;
+  justify-content: center;
 
 }
+
 @media only screen 
   and (max-width: 480px) {
   .header header h1{
@@ -423,6 +438,7 @@ main {
   #container {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   header {
     display: block;
@@ -477,11 +493,6 @@ main {
     }
 }
 
-@media only screen and (min-device-width: 740px) and (orientation: landscape) {
-  main {
-    height: -webkit-fill-available;
-  }
-}
-  
+
 
   

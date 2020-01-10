@@ -381,10 +381,13 @@ class App extends React.Component {
                 />
               )} />
              
-              <Route exact path="/favorites" render={() => (
+          <Route exact path="/favorites" render={() => (
+           
                 <Faves
-                  favorites={this.state.favorites}
-                />
+              favorites={this.state.favorites}
+              getComboRecipes={this.getComboRecipes}
+              />
+             
               )} />
 
               <Route path="/recipe/:id" render={(props) => (
