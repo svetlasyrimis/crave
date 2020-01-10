@@ -242,9 +242,9 @@ form {
   padding: 10px;
 }
 
-.comboHeaders h3{
+.comboHeaders h4{
   text-align: center;
-  font-size: 55px; 
+  /* font-size: 55px;  */
   background-color: lightblue; 
 }
 
