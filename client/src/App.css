@@ -481,7 +481,7 @@ main {
   and (max-width: 600px)
   and (min-height: 700px) {
     main {
-      height: -webkit-fill-available;
+      height: 90vh;
     }
 }
   
