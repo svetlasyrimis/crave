@@ -11,12 +11,7 @@ function MakeCombo(props) {
       {props.meal &&
         <Shuffler data={props.meal} />
       }
-     
-
-
     </div>
-
-
   )
 }
 

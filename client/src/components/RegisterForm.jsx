@@ -2,7 +2,7 @@ import React from 'react';
 
 export default (props) => (
   <>
-    
+
     <div className="register-form">
       <h3>Register Form</h3>
       <form className="reg" onSubmit={props.handleSubmit}>
@@ -13,7 +13,7 @@ export default (props) => (
           name="name"
           value={props.registerForm.name}
           id="name"
-          onChange={props.handleChange} required/>
+          onChange={props.handleChange} required />
         <label
           htmlFor="password">Password</label>
         <input
@@ -21,8 +21,7 @@ export default (props) => (
           name="password"
           value={props.registerForm.password}
           id="password"
-          onChange={props.handleChange} required/>
-
+          onChange={props.handleChange} required />
         <label
           htmlFor="email">Email</label>
         <input
@@ -30,11 +29,10 @@ export default (props) => (
           name="email"
           value={props.registerForm.email}
           id="email"
-          onChange={props.handleChange} required/>
-
+          onChange={props.handleChange} required />
         <input type="submit" value="Sign Up!" />
       </form>
-      </div>
-  
+    </div>
+
   </>
 );

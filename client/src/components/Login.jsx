@@ -6,7 +6,6 @@ import LoginForm from './LoginForm'
 export default function Login(props) {
   return (
     <>
-
       {
         props.currentView === 'register' && (
           <>

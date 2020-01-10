@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import logo from '../assets/mealm.jpg'
 
 const Nav = (props) => {
-
   return (
     <header>
       <nav id="nav-bar">
