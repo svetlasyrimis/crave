@@ -159,7 +159,6 @@ class App extends React.Component {
       combos: combos,
       favorites: favorites,
     })
-    console.log(this.state.favorites)
     this.props.history.push('/home');
  
   }
