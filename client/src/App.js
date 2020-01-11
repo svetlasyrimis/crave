@@ -121,12 +121,13 @@ class App extends React.Component {
     if (user) {
       const combos = await fetchUserCombos(user.id);
       const favorites = await fetchFavorites(user.id);
-      this.handleViewCombos(user.id);
+      const allcombos = await this.handleViewCombos(user.id);
       this.setState({
        
         currentUser: user,
-        combos: combos,
-        favorites: favorites,
+        combos,
+        favorites,
+        allcombos
       })
       this.props.history.push(`/home`)
     }
@@ -254,9 +255,7 @@ class App extends React.Component {
     
     const allcombos = await getALL(id);
     this.shuffle(allcombos)
-    this.setState({
-      allcombos
-    })
+    return allcombos
   }
 
   addNewComment = (comment) => {
