@@ -1,6 +1,8 @@
-### Project Overview
+## Project Overview
 
 A meal & drink suggestion app for indecisive eaters.
+
+![](crave.png)
 
 ## Project Description 
 
