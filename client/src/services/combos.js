@@ -2,7 +2,6 @@ import { api } from './auth';
 
 
 export const getALL = async (id) => {
-  debugger;
   const resp = await api.get(`/combos/${id}/all`);
   return resp.data.combos
 }

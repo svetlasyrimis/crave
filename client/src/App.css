@@ -76,9 +76,12 @@ div p{
   color: red;
 }
 
+
 hr {
   border-color:black;
   margin-top: 0 !important;
+  border:solid 0.5px black;
+  width: 96%;
 }
 #nav-bar a{
   justify-content: space-between;
@@ -202,6 +205,10 @@ form {
   margin: 10px;
 }
 
+.image-text p{
+  margin-top: 0.5rem;
+}
+
 .shuffler {
   background-color: lightblue;
 }
@@ -216,7 +223,7 @@ form {
   text-align: center;
   font-size: 20px; 
   justify-content: space-around;
-  margin-bottom: 45px; 
+  margin-bottom: 15px; 
   background-color: white;
 }
 
@@ -224,7 +231,13 @@ form {
   background-color: lightblue; 
   padding: 20px;
 }
-
+.get-inspired-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70vw;
+  padding: 20px;
+}
 
 .combo-board {
   text-align: center;
@@ -428,6 +441,9 @@ main {
    
   }
 
+  .get-inspired-div {
+    display: unset;
+  }
   .login-page,.register-page {
     width: 80%;
   }

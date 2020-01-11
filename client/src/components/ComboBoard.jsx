@@ -7,8 +7,10 @@ import ComboButtons from './ComboButtons'
 const ComboBoard = (props) => {
   return (
     <div className="combo-board">
-      <Link to="/allcombos"><button className="btn-secondary">Get inspired</button></Link>
-      
+      <div className="get-inspired-div">
+        <p>Check fellow users' combos here</p>
+        <Link to="/allcombos"><button className="btn-secondary">Get inspired</button></Link>   
+      </div>
       <h4>Your Board</h4>
       <hr />
       {props.combos.length > 0 ?
