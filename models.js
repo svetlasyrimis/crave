@@ -6,6 +6,17 @@ if (process.env.DATABASE_URL) {
     dialect: 'postgres',
     define: {
       underscored: true
+    },
+    dialectOptions: {
+      ssl: {
+          require: true,
+          rejectUnauthorized: false
+      }
+    },
+    pool: {
+        max: 20,
+        min: 0,
+        idle: 5000
     }
   });
 } else {
@@ -15,6 +26,17 @@ if (process.env.DATABASE_URL) {
     define: {
       underscored: true,
     },
+    dialectOptions: {
+      ssl: {
+          require: true,
+          rejectUnauthorized: false
+      }
+    },
+    pool: {
+        max: 20,
+        min: 0,
+        idle: 5000
+    }
   });
 }
 const User = sequelize.define('user', {
